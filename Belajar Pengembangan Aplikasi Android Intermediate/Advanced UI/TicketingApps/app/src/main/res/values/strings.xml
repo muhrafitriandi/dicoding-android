@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TicketingApps</string>
+    <string name="finish">Finish</string>
+    <string name="seat_number">Your seat number %s</string>
+    <string name="please_choose_seat_first">Please choose a seat first</string>
+    <string name="please_choose_seat">Please choose a seat</string>
 </resources>
