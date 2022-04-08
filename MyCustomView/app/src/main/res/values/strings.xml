@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MyCustomView</string>
+    <string name="fill_first">Fill first</string>
+    <string name="submit">Submit</string>
+    <string name="input_your_name">Input your name</string>
+</resources>
