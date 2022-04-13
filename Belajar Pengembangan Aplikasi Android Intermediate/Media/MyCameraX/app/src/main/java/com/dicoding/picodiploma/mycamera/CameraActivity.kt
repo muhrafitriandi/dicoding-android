@@ -84,7 +84,6 @@ class CameraActivity : AppCompatActivity() {
     }
 
     private fun startCamera() {
-
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
         cameraProviderFuture.addListener({
