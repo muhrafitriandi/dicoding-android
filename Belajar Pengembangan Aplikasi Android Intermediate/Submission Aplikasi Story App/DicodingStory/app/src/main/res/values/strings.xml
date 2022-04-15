@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Dicoding Story</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email_warning_message">Please enter a valid email address</string>
+    <string name="password_warning_message">Your password must be at least 6 characters</string>
+    <string name="name_warning_message">Please enter valid name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="close">Close</string>
+    <string name="email_is_already_taken">Email is already taken</string>
+    <string name="don_t_have_an_account">Don\'t have an account?"&#x20;"</string>
+    <string name="already_have_an_account">Already have an account?"&#x20;"</string>
 </resources>
