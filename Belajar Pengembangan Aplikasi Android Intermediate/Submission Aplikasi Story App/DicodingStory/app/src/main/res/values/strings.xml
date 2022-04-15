@@ -10,6 +10,7 @@
     <string name="name">Name</string>
     <string name="close">Close</string>
     <string name="email_is_already_taken">Email is already taken</string>
+    <string name="user_not_found">User not found</string>
     <string name="don_t_have_an_account">Don\'t have an account?"&#x20;"</string>
     <string name="already_have_an_account">Already have an account?"&#x20;"</string>
 </resources>

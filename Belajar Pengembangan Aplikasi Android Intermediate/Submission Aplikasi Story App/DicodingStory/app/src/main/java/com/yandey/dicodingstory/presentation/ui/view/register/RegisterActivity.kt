@@ -3,6 +3,7 @@ package com.yandey.dicodingstory.presentation.ui.view.register
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
@@ -56,11 +57,13 @@ class RegisterActivity : AppCompatActivity() {
             when (it) {
                 is Resource.Success -> {
                     showLoading(false)
-                    Toast.makeText(this, it.message, LENGTH_SHORT).show()
+                    Toast.makeText(this, it.data?.message.toString(), LENGTH_SHORT).show()
+                    finishAndRemoveTask()
                 }
                 is Resource.Error -> {
                     showLoading(false)
-                    Toast.makeText(this, getString(R.string.email_is_already_taken), LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.email_is_already_taken), LENGTH_SHORT)
+                        .show()
                 }
                 is Resource.Loading -> {
                     showLoading(true)
