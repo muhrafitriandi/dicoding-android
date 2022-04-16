@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DicodingStory">
         <activity
-            android:name=".presentation.ui.view.register.RegisterActivity"
+            android:name=".presentation.ui.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.ui.view.login.LoginActivity"
+            android:name=".presentation.ui.view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +25,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.ui.view.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.view.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.view.login.LoginActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

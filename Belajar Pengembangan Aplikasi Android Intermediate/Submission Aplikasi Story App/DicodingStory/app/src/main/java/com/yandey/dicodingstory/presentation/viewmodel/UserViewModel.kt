@@ -7,14 +7,17 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.yandey.dicodingstory.data.model.body.LoginBody
 import com.yandey.dicodingstory.data.model.body.RegisterBody
 import com.yandey.dicodingstory.data.model.response.LoginResponse
 import com.yandey.dicodingstory.data.model.response.RegisterResponse
+import com.yandey.dicodingstory.domain.repository.DataStoreRepository
 import com.yandey.dicodingstory.domain.usecase.LoginUseCase
 import com.yandey.dicodingstory.domain.usecase.RegisterUseCase
 import com.yandey.dicodingstory.util.Resource
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class UserViewModel(
@@ -24,6 +27,14 @@ class UserViewModel(
 ): AndroidViewModel(app) {
     val loginUser: MutableLiveData<Resource<LoginResponse>> = MutableLiveData()
     val registerUser: MutableLiveData<Resource<RegisterResponse>> = MutableLiveData()
+
+    private val dataStoreRepository = DataStoreRepository(app)
+
+    fun saveLoginToken(loginToken: String) = viewModelScope.launch {
+        dataStoreRepository.saveLoginToken(loginToken)
+    }
+
+    fun getLoginToken() = dataStoreRepository.getLoginToken().asLiveData(Dispatchers.IO)
 
     fun login(loginBody: LoginBody) = viewModelScope.launch {
         loginUser.postValue(Resource.Loading())
