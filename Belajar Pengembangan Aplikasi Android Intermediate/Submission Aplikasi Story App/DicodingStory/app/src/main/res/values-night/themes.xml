@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DicodingStory" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white_smoke</item>
+        <item name="colorPrimaryVariant">@color/black_pearl</item>
+        <item name="colorOnPrimary">@color/nobel</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white_smoke</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/white_smoke</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:navigationBarColor">@color/black_pearl</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/black_pearl</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/layer_splash_dark</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black_pearl</item>
+        <item name="android:navigationBarColor">@color/black_pearl</item>
+    </style>
+
+    <style name="TextDescSettings">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/white_smoke</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+    <style name="TextSubSettings">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/nobel</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="RoundImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/default_image"
+        android:scaleType="fitStart"
+        android:src="@drawable/top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCreateAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="62dp"
+        android:alpha="0"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/create_account"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSignUpToGetStarted"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/sign_up_to_get_started"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/tvCreateAccount"
+        app:layout_constraintStart_toStartOf="@id/tvCreateAccount"
+        app:layout_constraintTop_toBottomOf="@id/tvCreateAccount" />
+
+    <com.yandey.dicodingstory.customview.EditTextNameView
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="200dp"
+        android:alpha="0"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/lato"
+        android:inputType="text"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.yandey.dicodingstory.customview.EditTextEmailView
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="12dp"
+        android:alpha="0"
+        android:drawableStart="@drawable/ic_alternate_email"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/lato"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="@+id/etName"
+        app:layout_constraintStart_toStartOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+    <com.yandey.dicodingstory.customview.EditTextPasswordView
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="12dp"
+        android:alpha="0"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/lato"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="@+id/etEmail"
+        app:layout_constraintStart_toStartOf="@+id/etEmail"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <com.yandey.dicodingstory.customview.ButtonView
+        android:id="@+id/btnSignUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0"
+        android:enabled="false"
+        android:text="@string/sign_up"
+        android:textColor="?attr/colorPrimaryVariant"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvAlreadyHaveAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:alpha="0"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/already_have_an_account"
+        app:layout_constraintEnd_toStartOf="@+id/tvSignIn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/btnSignUp"
+        app:layout_constraintTop_toBottomOf="@id/btnSignUp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/sign_in"
+        android:textColor="?attr/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlreadyHaveAnAccount"
+        app:layout_constraintEnd_toEndOf="@id/btnSignUp"
+        app:layout_constraintStart_toEndOf="@id/tvAlreadyHaveAnAccount"
+        app:layout_constraintTop_toTopOf="@+id/tvAlreadyHaveAnAccount" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/default_image"
+        android:scaleType="fitEnd"
+        android:src="@drawable/triple_ball_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
